@@ -13,8 +13,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/btcsuite/btcd/btcjson"
-	"github.com/btcsuite/btcutil"
+	"github.com/straysh/btcd/btcjson"
+	"github.com/straysh/btcutil"
 	flags "github.com/jessevdk/go-flags"
 )
 

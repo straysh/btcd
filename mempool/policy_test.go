@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/straysh/btcd/btcec"
+	"github.com/straysh/btcd/chaincfg"
+	"github.com/straysh/btcd/chaincfg/chainhash"
+	"github.com/straysh/btcd/txscript"
+	"github.com/straysh/btcd/wire"
+	"github.com/straysh/btcutil"
 )
 
 // TestCalcMinRequiredTxRelayFee tests the calcMinRequiredTxRelayFee API.
