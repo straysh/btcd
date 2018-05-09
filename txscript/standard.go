@@ -10,6 +10,7 @@ import (
 	"github.com/straysh/btcd/chaincfg"
 	"github.com/straysh/btcd/wire"
 	"github.com/straysh/btcutil"
+	"sort"
 )
 
 const (
@@ -489,6 +490,11 @@ func MultiSigScript(pubkeys []*btcutil.AddressPubKey, nrequired int) ([]byte, er
 	}
 
 	builder := NewScriptBuilder().AddInt64(int64(nrequired))
+	sort.Slice(pubkeys, func(i,j int) bool {
+		a := pubkeys[i]
+		b := pubkeys[j]
+		return a.String() < b.String()
+	})
 	for _, key := range pubkeys {
 		builder.AddData(key.ScriptAddress())
 	}
